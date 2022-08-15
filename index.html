@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Sorter</title>
+  </head>
+  <body>
+    <main>
+      <a href="/" target="_blank">
+        <img src="dragon.svg" class="logo dragon" alt="Blue Dragon" />
+      </a>
+
+      <h1>Sorter</h1>
+
+      <div class="card">
+        <button disabled id="sorter" type="button">sort</button>
+      </div>
+
+      <form>
+        <label for="file">Open from CSV File</label>
+        <input
+          id="file"
+          type="file"
+          accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+        />
+      </form>
+
+      <footer>
+        <p class="read-the-docs">Click on the button to sort the names.</p>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
