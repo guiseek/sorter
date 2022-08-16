@@ -6,9 +6,14 @@ export function sortControl(
   excludes: number[] = []
 ) {
   const sorter = sortName(names, excludes)
-  
+
   const setCurrent = ({ value, done }: ReturnType<typeof sorter.next>) => {
-    element.innerHTML = done ? `complete` : `sorted is ${value}`
+    if (!done) {
+      element.innerHTML = `sorted is ${value}`
+    } else {
+      element.innerHTML = `complete`
+      element.disabled = true
+    }
   }
 
   element.onclick = () => setCurrent(sorter.next())
